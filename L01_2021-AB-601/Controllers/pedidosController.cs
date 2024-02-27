@@ -18,7 +18,7 @@ namespace L01_2021_AB_601.Controllers
 
         }
 
-        //Método para leer todos los pedidos
+        //Método para leer todos los pedidosS
         [HttpGet]
         [Route("GetAll")]
 
