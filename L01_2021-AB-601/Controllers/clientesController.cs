@@ -10,11 +10,11 @@ namespace L01_2021_AB_601.Controllers
     public class clientesController : ControllerBase
     {
 
-        private readonly restauranteContext _clientesContexto;
+        private readonly clientesContext _clientesContexto;
 
-        public clientesController(restauranteContext restauranteContexto)
+        public clientesController(clientesContext clientesContexto)
         {
-            _clientesContexto = restauranteContexto;
+            _clientesContexto = clientesContexto;
 
         }
 

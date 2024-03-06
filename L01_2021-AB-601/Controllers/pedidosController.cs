@@ -9,11 +9,11 @@ namespace L01_2021_AB_601.Controllers
     [ApiController]
     public class pedidosController : ControllerBase
     {
-        private readonly restauranteContext _pedidosContexto;
+        private readonly pedidosContext _pedidosContexto;
 
-        public pedidosController(restauranteContext restauranteContexto) 
+        public pedidosController(pedidosContext pedidosContexto) 
         {
-            _pedidosContexto = restauranteContexto;
+            _pedidosContexto = pedidosContexto;
 
 
         }
