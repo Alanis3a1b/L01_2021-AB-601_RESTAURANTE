@@ -72,7 +72,7 @@ namespace L01_2021_AB_601.Controllers
 
         //Método para modificar los platos de la tabla
         [HttpPut]
-        [Route("actualizar/{id}")]
+        [Route("Actualizar/{id}")]
 
         public IActionResult ActualizarPlato(int id, [FromBody] platos platoModificar)
         {
@@ -98,7 +98,7 @@ namespace L01_2021_AB_601.Controllers
 
         //Eliminar plato
         [HttpPut]
-        [Route("actualizar/{id}")]
+        [Route("Eliminar/{id}")]
         public IActionResult EliminarPlato(int id)
         {
             platos? plato = (from e in _platosContexto.platos

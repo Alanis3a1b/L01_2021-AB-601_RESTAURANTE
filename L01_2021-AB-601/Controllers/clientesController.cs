@@ -74,25 +74,24 @@ namespace L01_2021_AB_601.Controllers
 
         //Método para modificar los clientes de la tabla
         [HttpPut]
-        [Route("actualizar/{id}")]
+        [Route("Actualizar/{id}")]
 
         public IActionResult ActualizarCliente(int id, [FromBody] clientes clienteModificar)
         {
-            //Sigo sin saber por qué me da error esta parte, será el álias?
-            //Ya lo probé y sigo sin saber que puede ser :(
-            clientes? clienteActual = (from e in _clientesContexto.clientes
+
+            clientes? cliente = (from e in _clientesContexto.clientes
                                    where e.clienteId == id
                                    select e).FirstOrDefault();
 
-            if (clienteActual == null)
+            if (cliente == null)
             { return NotFound(); }
 
-            clienteActual.nombreCliente = clienteModificar.nombreCliente;
-            clienteActual.direccion = clienteModificar.direccion;
+            cliente.nombreCliente = clienteModificar.nombreCliente;
+            cliente.direccion = clienteModificar.direccion;
 
 
 
-            _clientesContexto.Entry(clienteActual).State = EntityState.Modified;
+            _clientesContexto.Entry(cliente).State = EntityState.Modified;
             _clientesContexto.SaveChanges();
 
             return Ok(clienteModificar);
@@ -101,7 +100,7 @@ namespace L01_2021_AB_601.Controllers
 
         //Eliminar cliente
         [HttpPut]
-        [Route("actualizar/{id}")]
+        [Route("Eliminar/{id}")]
         public IActionResult EliminarCliente(int id)
         {
             clientes? cliente = (from e in _clientesContexto.clientes

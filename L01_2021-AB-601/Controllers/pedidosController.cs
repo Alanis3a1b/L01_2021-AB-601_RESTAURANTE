@@ -90,7 +90,7 @@ namespace L01_2021_AB_601.Controllers
 
         //Método para modificar los pedidos de la tabla
         [HttpPut]
-        [Route("actualizar/{id}")]
+        [Route("Actualizar/{id}")]
 
         public IActionResult ActualizarPedido(int id, [FromBody] pedidos pedidoModificar)
         {
@@ -119,7 +119,7 @@ namespace L01_2021_AB_601.Controllers
 
         //Eliminar pedido
         [HttpPut]
-        [Route("actualizar/{id}")]
+        [Route("Eliminar/{id}")]
         public IActionResult EliminarPedido(int id)
         {
             pedidos? pedido = (from e in _pedidosContexto.pedidos
