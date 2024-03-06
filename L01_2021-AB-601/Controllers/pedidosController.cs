@@ -15,7 +15,6 @@ namespace L01_2021_AB_601.Controllers
         {
             _pedidosContexto = pedidosContexto;
 
-
         }
 
         //Método para leer todos los pedidosS

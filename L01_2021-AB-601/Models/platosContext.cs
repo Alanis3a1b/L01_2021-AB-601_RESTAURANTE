@@ -5,7 +5,7 @@ namespace L01_2021_AB_601.Models
 {
     public class platosContext : DbContext
     {
-        public platosContext(DbContextOptions<clientesContext> options) : base(options)
+        public platosContext(DbContextOptions<platosContext> options) : base(options)
         {
 
         }

@@ -15,7 +15,6 @@ namespace L01_2021_AB_601.Controllers
         {
             _platosContexto = platosContexto;
 
-
         }
 
         //Método para leer todos los platos
