@@ -15,17 +15,17 @@ builder.Services.AddDbContext<clientesContext>(options =>
          )
 );
 
-//builder.Services.AddDbContext<pedidosContext>(options =>
-//         options.UseSqlServer(
-//             builder.Configuration.GetConnectionString("restauranteDbConnection")
-//         )
-//);
+builder.Services.AddDbContext<pedidosContext>(options =>
+         options.UseSqlServer(
+             builder.Configuration.GetConnectionString("restauranteDbConnection")
+         )
+);
 
-//builder.Services.AddDbContext<platosContext>(options =>
-//         options.UseSqlServer(
-//             builder.Configuration.GetConnectionString("restauranteDbConnection")
-//         )
-//);
+builder.Services.AddDbContext<platosContext>(options =>
+         options.UseSqlServer(
+             builder.Configuration.GetConnectionString("restauranteDbConnection")
+         )
+);
 
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
